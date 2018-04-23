@@ -1,0 +1,30 @@
+<div class="table-responsive-sm">
+  <h1 class="display-4 text-center">List Peoples</h1>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#Id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Age</th>
+        <th scope="col">Weight</th>
+        <th scope="col" class="bg-warning">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let peoples of peoplesData">
+      <tr>
+        <th scope="row">{{peoples._id}}</th>
+        <td>{{peoples.name}}</td>
+        <td>{{peoples.lastName}}</td>
+        <td>{{peoples.age}}</td>
+        <td>{{peoples.weight}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-danger" (click)="deletePeople(peoples._id)">Delete</button>
+          <button type="button" class="btn btn-outline-warning">Update</button>
+        </td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+
+</div>
